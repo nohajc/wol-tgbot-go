@@ -9,18 +9,6 @@ import (
 	"github.com/nohajc/wol-tgbot-go/bot"
 )
 
-// Device represents the computer to be woken up
-type Device struct {
-	Name string `yaml:"name"`
-	MAC  string `yaml:"mac"`
-}
-
-// Config is the bot configuration
-type Config struct {
-	AllowedClients []int64  `yaml:"allowed-clients"`
-	Devices        []Device `yaml:"devices"`
-}
-
 func main() {
 	home, err := homedir.Dir()
 	if err != nil {
